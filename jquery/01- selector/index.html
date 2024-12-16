@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .my-class{
+
+            }
+            #my-id{
+
+            }
+            h1{
+
+            }
+            h1[data-name="my-attribute-name"]{
+
+            }
+            .my-class[data-name="my-attribute-name"]{
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="my-id" class="my-class" data-name="my-attribute-name">
+            Hello World
+        </h1>
+
+        <script>
+            // $('#my-id').text("Hello")
+            // $('.my-class').text("Hello class")
+            // $('h1').text("Hello tag")
+            $('[data-name="my-attribute-name"]').text("Hello attribute")
+        </script>
+    </body>
+</html>

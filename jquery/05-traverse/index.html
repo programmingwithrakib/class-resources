@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <title>Jquery Get And Set Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>List Item 1</li>
+        <li class="li-2">List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+        <li>List Item 6</li>
+        <li>List Item 7</li>
+    </ul>
+
+    <button>Click Me</button>
+
+<script>
+    $('button').on('click', function (){
+        // $('.li-2').prev().text("I am changed")
+        $('.li-2').parent().empty()
+
+        $('ul').html('<li>List Item 4</li>')
+    });
+
+</script>
+</body>
+</html>

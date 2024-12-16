@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <title>Jquery Get And Set Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    <li>List Item 4</li>
+</ul>
+
+<button id="add">Add Element</button>
+<button id="remove">Remove Element</button>
+
+<script>
+    $('#add').on('click', function (){
+    $('ul').append('<li>New List Item</li>');
+})
+
+
+    $('#remove').on('click', function (){
+    $('ul').empty();
+})
+
+</script>
+</body>
+</html>
