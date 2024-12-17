@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <title>Jquery Get And Set Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            background: purple;
+        }
+
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--Add Class, Remove Class, Toggle Class, Inline CSS-->
+<div class="box">
+
+</div>
+
+<br>
+<button id="hide-button">Click To Hide</button>
+<button id="show-button">Click To Show</button>
+<button id="toggle-button">Click To Hide/Show</button>
+<button id="change-inline-css-btn">Click To Inline Style</button>
+
+<script>
+    $('#hide-button').on('click', function (){
+        $('.box').addClass('hide');
+    })
+
+    $('#show-button').on('click', function (){
+        $('.box').removeClass('hide')
+    })
+
+    $('#toggle-button').on('click', function (){
+        /*let is_hide_class = $('.box').hasClass('hide');
+        if(is_hide_class){
+            $('.box').removeClass('hide')
+        }
+        else{
+            $('.box').addClass('hide');
+        }*/
+
+        $('.box').toggleClass('hide')
+    })
+
+
+    $('#change-inline-css-btn').on('click', function (){
+       /* $('.box').css('backgroundColor', 'red');
+        $('.box').css('height', '300px');
+        $('.box').css('width', '300px');*/
+
+        $('.box').css({
+            backgroundColor: 'red', // backgroundColor
+            height: '400px',
+            width:'400px',
+        })
+    })
+
+
+</script>
+</body>
+</html>
